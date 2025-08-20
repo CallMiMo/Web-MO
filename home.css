@@ -63,6 +63,10 @@ li>a{
     align-items: center;
     justify-content: center;
     gap: .3rem;
+    z-index: 1;
+    height: 100px;
+    width: 100px;
+
 }
 #slider-btns > a{
     height: .4rem;
@@ -70,13 +74,13 @@ li>a{
     display: inline-block;
     border-radius: .4rem;
     background-color: #444;
-    transition: background-color .2s ease, width .2s ease;
+    transition: background-color .2s ease, width.2s ease;
 }
 #slider-btns>a:hover{
     background-color: #777;
 }
 #slider-btns> a.on{
-    width: 1rem;
+    width:1rem;
     background-color: #ccc;
 }
 #books{
