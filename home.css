@@ -4,7 +4,6 @@ body{
     height: 100vh;
     background: #222; 
     font-family: system-ui,sans-serif;
-    /* position: relative; */
 }
 .btn{
     cursor: pointer;
@@ -18,7 +17,6 @@ ul{
     list-style: none;
     align-items: center;
     justify-content: center;
-    /* gap: 1rem; */
 }
 li>a{
     display: block;
@@ -36,7 +34,7 @@ li>a{
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    
     /* border: 1px solid #777; */
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -66,12 +64,20 @@ li>a{
     justify-content: center;
     gap: .3rem;
 }
-#slider-btns>a{
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #aaa;
+#slider-btns > a{
+    height: .4rem;
+    width: .4rem;
     display: inline-block;
+    border-radius: .4rem;
+    background-color: #444;
+    transition: background-color .2s ease, width .2s ease;
+}
+#slider-btns>a:hover{
+    background-color: #777;
+}
+#slider-btns> a.on{
+    width: 1rem;
+    background-color: #ccc;
 }
 #books{
     position: absolute;
