@@ -5,6 +5,12 @@ body{
     background: #222; 
     font-family: system-ui,sans-serif;
 }
+button{
+    background: none;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
 .btn{
     cursor: pointer;
 }
@@ -53,7 +59,11 @@ li>a{
     align-items: center;
     display: flex;
     /* border: 1px solid #eee; */
-
+    transition: scale .2s ease;
+    
+}
+.img:hover{
+    scale: 2;
 }
 #slider-btns{
     position: absolute;
@@ -119,3 +129,65 @@ li>a{
     align-items: center;
     gap: .5rem;
 }
+aside{
+    border: 1px solid #555;
+    border-radius: 24px;
+    height:calc(100dvh - 4rem);
+    width: 27dvw;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 2rem;
+    transform: translateX(calc(100% + 2rem));
+    transition: transform 150ms ease;
+}
+aside.view{
+    transform: translateX(0);
+}
+section:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: .5rem;
+}
+.close{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-image: url(close-outline.svg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    transition: background-color 150ms ease;
+}
+.close:hover{
+    background-color: #3337;
+}
+section:nth-child(2){
+    padding: 2rem;
+    position: relative;
+}
+section:nth-child(2)>div:nth-child(1){
+    font-size: 120%;
+}
+section:nth-child(2)>div:nth-child(2){
+    opacity: .5;
+}
+section:nth-child(2)>div:nth-child(3){
+    width: fit-content;
+    padding: 1rem 0;
+    background-image: linear-gradient(to right, goldenrod 90%, #444 0);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+section:nth-child(2)>div:nth-child(4){
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    border: 1px solid purple;
+    padding: .8rem .6rem;
+    border-radius: 250px;
+    font-size: 100%;
+}
+
+    
