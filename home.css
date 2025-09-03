@@ -31,7 +31,7 @@ li>a{
 }
 #banner{
     height: 400px;
-    background: #3335;
+    /* background: #3335; */
     position:relative;
 }
 #slider{
@@ -60,6 +60,9 @@ li>a{
     display: flex;
     /* border: 1px solid #eee; */
     transition: scale .2s ease;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: center;
     
 }
 .img:hover{
@@ -133,13 +136,21 @@ aside{
     border: 1px solid #555;
     border-radius: 24px;
     height:calc(100dvh - 4rem);
-    width: 27dvw;
+    width: 25dvw;
     position: fixed;
     right: 0;
     top: 0;
     margin: 2rem;
     transform: translateX(calc(100% + 2rem));
     transition: transform 150ms ease;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+aside::-webkit-scrollbar{
+    width: .3rem;
+}
+aside::-webkit-scrollbar-thumb{
+    background-color: #555;
 }
 aside.view{
     transform: translateX(0);
@@ -147,19 +158,47 @@ aside.view{
 section:nth-child(1){
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     padding: .5rem;
 }
-.close{
-    height: 3rem;
-    width: 3rem;
+.svg{
+    height: 2rem;
+    width: 2rem;
     border-radius: 50%;
-    background-image: url(close-outline.svg);
     background-repeat: no-repeat;
     background-size: 70%;
     background-position: center;
     transition: background-color 150ms ease;
 }
+.chevron{
+    background-image: url(chevron-back-outline.svg);
+}
+.person{
+    /* background-image: url(person-outline.svg); */
+    height: 3.5rem;
+    width: 3.5rem;
+    flex-shrink: 0;
+    font-size: 200%;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+}
+#chevrons{
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border-radius: 24px;
+    padding: .5rem;
+    margin-left: 1rem;
+}
+.right{
+    transform: rotate(180deg);
+}
+.close{
+    background-image:url(close-outline.svg);
+    margin-left: auto;
+} 
 .close:hover{
     background-color: #3337;
 }
@@ -175,19 +214,56 @@ section:nth-child(2)>div:nth-child(2){
 }
 section:nth-child(2)>div:nth-child(3){
     width: fit-content;
-    padding: 1rem 0;
+    padding: 1rem 0 0;
     background-image: linear-gradient(to right, goldenrod 90%, #444 0);
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 section:nth-child(2)>div:nth-child(4){
     position: absolute;
-    right: 20%;
+    right: 12%;
     top: 50%;
-    border: 1px solid purple;
-    padding: .8rem .6rem;
-    border-radius: 250px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: .8rem 1.8rem;
+    border-radius: 24px;
     font-size: 100%;
 }
-
+#dwl{
+    width: fit-content;
+    font-weight: 500;
+    opacity: .5;
+}
+.review{
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    gap: 2rem;
+    font-family: serif;
+}
+.review>p{
+    font-size: 150%;
+    color: hsl(328, 100%, 38%);
+    background-image: linear-gradient(to left,rgb(171, 221, 227), rgb(255, 0, 208));
+    background-clip: text;
+    color: transparent;
+}
+.cat{
+    background-image: url(613bFacCFjL.jpg);
+}
+.eat{
+    background-image: url(60556912.jpg);
+}
+.axolotl{
+    background-image: url(Tahereh-Mafi-Shatter-Me-Paperback-9780062085504_1a1f2701-8d0b-4857-a6c9-11c592c08e35_1.b6b0aea6b824caac778f099a9788fbb5.avif);
+}
+.dolphin{
+    background-image: url(71Ii6a7sajL._SL1500_.jpg);
+}
+.confetti{
+    height: .5rem;
+    width: 2.5rem;
+    background-color: #e35;
+    transform: rotate(15deg);
+    position: fixed;
+}
     
